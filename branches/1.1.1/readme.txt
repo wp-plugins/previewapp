@@ -6,7 +6,7 @@ Tested up to: 4.0
 Stable tag: 1.1.1
 License: Preview App
 
-Preview-App allow your wordpress to comments and discuss your webdesign and developpement against the Preview Web service to see if they look like and bugless.
+Preview-App allow your wordpress to comments and discuss your webdesign and developpement against Preview App.
 
 == Description ==
 
