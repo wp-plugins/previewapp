@@ -11,7 +11,7 @@ Preview-App allow your wordpress to comments and discuss your webdesign and deve
 == Description ==
 
 
-Preview-App extension allow your wordpress to comments and discuss your webdesign and developpement against the Preview APP online toolto see if they look like and bugless.
+Preview-App extension allow your wordpress to comments and discuss your webdesign and developpement against the Preview APP online tool to see if they look like and bugless.
 
 Preview-app is an online revolutionary platform very complete wich allow you to manage digitals & colaborative projects online.
 this platform allow you to unify all the digital work ( like ergonomics, graphism, developpment,check back) with a unic interface. 
