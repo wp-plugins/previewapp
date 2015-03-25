@@ -1,0 +1,8 @@
+Order Deny,Allow
+Deny from all
+
+
+#allow access to any js
+<FilesMatch "^(.+)\.(js)$">
+	Allow from all
+</FilesMatch>
