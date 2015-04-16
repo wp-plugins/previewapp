@@ -2,7 +2,7 @@
     function addEvent( obj, type, fn ) {
         if ( obj.attachEvent ) {
             obj['e'+type+fn] = fn;
-            obj[type+fn] = function(){obj['e'+type+fn]( window.event );}
+            obj[type+fn] = function() { obj['e'+type+fn]( window.event ); };
             obj.attachEvent( 'on'+type, obj[type+fn] );
         } else
             obj.addEventListener( type, fn, false );
@@ -55,6 +55,7 @@
                 if (event.origin !== event.data.urlsrc) {
                     return;
                 }
+
                 me.source = event.source;
                 me.origin = event.origin;
                 var action = event.data.action;
@@ -78,7 +79,7 @@
         var x = 0, scroll_x = 0,
             y = 0, scroll_y = 0,
             width, height,
-            mask, css, circle, lastScrollTop = null;
+            mask, css, lastScrollTop = null;
 
         /****************************************************************/
         // Scoped functions                                             //
@@ -205,29 +206,6 @@
                 x += Math.floor(getScrollbarWidth() / 2);
             }
 
-            if (document.getElementById('inspector-issue-circle') !== null) {
-                document.body.removeChild(document.getElementById('inspector-issue-circle'));
-            }
-
-            // 25 est la dimension du cercle
-            circle = document.createElement('div'),
-                circle.className = 'issue-circle';
-            circle.id = 'inspector-issue-circle';
-
-            document.body.appendChild(circle);
-
-            var scroll = getScroll();
-
-            circle.style.top = parseInt(scroll.y) + parseInt(y) - (25 / 2) + 'px';
-            circle.style.left = parseInt(scroll.x) + parseInt(x) - (25 / 2) + 'px';
-            circle.style.width = '25px';
-            circle.style.height = '25px';
-            circle.style.borderRadius = '75px';
-            circle.style.zIndex = '2';
-            circle.style.border = '1px solid #fff';
-            circle.style.backgroundColor = '#5693c9';
-            circle.style.position = 'absolute';
-
             return {
                 'width': width,
                 'height': height,
@@ -273,6 +251,15 @@
         /****************************************************************/
         // Server listeners                                             //
         /****************************************************************/
+
+        server.on('inspector-scroll-to', function(scrollY) {
+            //TODO: check x/y
+            window.scrollTo(scrollY, scrollY);
+            server.postMessage({
+                action: 'inspector-scroll-to',
+                result: {}
+            });
+        });
 
         /**
          *
@@ -329,9 +316,13 @@
          */
         server.on('inspector-end-screenshot', function () {
             mask.style.display = 'block';
-            if (document.getElementById('inspector-issue-circle') !== null) {
-                document.body.removeChild(document.getElementById('inspector-issue-circle'));
-            }
+        });
+
+        /**
+         *
+         */
+        server.on('inspector-get-html', function () {
+            return encodeURIComponent(document.documentElement.outerHTML)
         });
 
         server.listen(window);
