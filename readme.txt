@@ -37,5 +37,5 @@ PS: You'll need an [Preview APP account](http://Preview-app.net/) to use it.
 = 1.1.2 =
 * Provide a Js to your wordpress to launch project and manage your work with Preview APP
 
-= 1.1.2 =
+= 1.1.3 =
 * allow frame from preview web site.
