@@ -22,8 +22,8 @@ define( 'PREVIEWAPP__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'PREVIEWAPP_DELETE_LIMIT', 100000 );
 define( 'PREVIEWAPP__JS', "injection.js" );
 
-// modification des headers pour les mettre en SameOrigin quand preview est activé.
-@header("X-FRAME-OPTIONS:  SAMEORIGIN");//ALLOW-FROM https://projets.preview-app.net"); 
+// modification des headers pour les mettre en SameOrigin quand preview est activ.
+@header("X-FRAME-OPTIONS: ALLOW-FROM https://projets.preview-app.net");
 @header("Access-Control-Allow-Origin: *");
 
 if(is_file(PREVIEWAPP__PLUGIN_DIR.PREVIEWAPP__JS))
