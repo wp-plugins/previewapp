@@ -31,11 +31,11 @@ PS: You'll need an [Preview APP account](http://Preview-app.net/) to use it.
 == Changelog ==
 
 
-= 1.1.1 =
+= 0.1 =
 * Provide a Js to your wordpress to launch project and manage your work with Preview APP
 
-= 1.1.2 =
+= 0.2 =
 * Provide a Js to your wordpress to launch project and manage your work with Preview APP
 
-= 1.1.3 =
+= 0.3 =
 * allow iframe from preview

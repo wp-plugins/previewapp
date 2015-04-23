@@ -3,7 +3,7 @@
 Plugin Name: PreviewApp
 Plugin URI: http://www.preview-app.net
 Description: Plugin d'installation de preview sur votre site wordpress
-Version: 0.2
+Version: 0.3
 Author: Preview
 Author URI: http://www.preview-app.net
 License: GPL2
@@ -15,7 +15,7 @@ if ( !function_exists( 'add_action' ) ) {
 	exit;
 }
 
-define( 'PREVIEWAPP_VERSION', '4.0.2' );
+define( 'PREVIEWAPP_VERSION', '4.0.3' );
 define( 'PREVIEWAPP__MINIMUM_WP_VERSION', '3.1' );
 define( 'PREVIEWAPP__PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'PREVIEWAPP__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
