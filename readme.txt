@@ -3,7 +3,7 @@ Contributors: previewapp
 Tags: Preview, Preview App, discuss, management, comments, design, bug, tracker
 Requires at least: 3.1
 Tested up to: 4.0
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 License: Preview App
 
 Preview-App allow your wordpress to comments and discuss your webdesign and developpement against the Preview Web service to see if they look like and bugless.
@@ -31,14 +31,17 @@ PS: You'll need an [Preview APP account](http://Preview-app.net/) to use it.
 == Changelog ==
 
 
-= 0.1 =
+= 1.1.1 =
 * Provide a Js to your wordpress to launch project and manage your work with Preview APP
 
-= 0.2 =
+= 1.1.2 =
 * Provide a Js to your wordpress to launch project and manage your work with Preview APP
 
-= 0.3 =
+= 1.1.3 =
 * allow iframe from preview
 
-= 0.4 =
+= 1.1.4 =
 * remove local script
+
+= 1.1.5 =
+* minor modifications
